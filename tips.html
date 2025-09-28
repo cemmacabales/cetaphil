@@ -1,39 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="min-height: 100%; scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cetaphil Tips & Facts - Skincare Guidance</title>
     <link rel="icon" type="image/webp" href="falvicon.webp">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
 </head>
-<body>
+<body style="background-image: url(bg.png); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; margin: 0; overflow-x: hidden; font-family: 'Arial', sans-serif; line-height: 1.6;">
     <!-- Navigation -->
-    <nav>
-        <div class="navlogocontainer">
-            <img src="https://www.cetaphil.com.ph/on/demandware.static/Sites-Galderma-PH-Site/-/default/dw3625689b/images/logo_small.png" alt="Cetaphil Logo">
+    <nav style="background-color: white; position: sticky; top: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 15px 30px; border-bottom: #0c5b9a 3px solid; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="flex: 1; max-width: 200px;">
+            <img src="https://www.cetaphil.com.ph/on/demandware.static/Sites-Galderma-PH-Site/-/default/dw3625689b/images/logo_small.png" alt="Cetaphil Logo" style="max-width: 100%; height: auto;">
         </div>
-        <div class="rightsidecontainer">
-            <a href="index.html" class="navlink">HOME</a>
-            <a href="product.html" class="navlink">PRODUCT</a>
-            <a href="tips.html" class="navlink active">TIPS & FACTS</a>
-            <a href="about.html" class="navlink">ABOUT</a>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="index.html" style="font-family: sans-serif; color: #0c5b9a; font-weight: bold; font-size: clamp(14px, 2vw, 18px); text-decoration: none; padding: 10px 15px; border-radius: 5px; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#0c5b9a'; this.style.color='white'; this.style.transform='translateY(-2px)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#0c5b9a'; this.style.transform='translateY(0)';">HOME</a>
+            <a href="product.html" style="font-family: sans-serif; color: #0c5b9a; font-weight: bold; font-size: clamp(14px, 2vw, 18px); text-decoration: none; padding: 10px 15px; border-radius: 5px; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#0c5b9a'; this.style.color='white'; this.style.transform='translateY(-2px)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#0c5b9a'; this.style.transform='translateY(0)';">PRODUCT</a>
+            <a href="tips.html" style="font-family: sans-serif; color: white; background-color: #0c5b9a; font-weight: bold; font-size: clamp(14px, 2vw, 18px); text-decoration: none; padding: 10px 15px; border-radius: 5px; transition: all 0.3s ease; cursor: pointer;">TIPS & FACTS</a>
+            <a href="about.html" style="font-family: sans-serif; color: #0c5b9a; font-weight: bold; font-size: clamp(14px, 2vw, 18px); text-decoration: none; padding: 10px 15px; border-radius: 5px; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#0c5b9a'; this.style.color='white'; this.style.transform='translateY(-2px)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#0c5b9a'; this.style.transform='translateY(0)';">ABOUT</a>
         </div>
     </nav>
 
     <!-- Header Image -->
-    <img src="headerpic.png" alt="Cetaphil Header" class="responsive-img" style="border-top: #0c5b9a 4px solid; border-bottom: #0c5b9a 4px solid;">
+    <img src="headerpic.png" alt="Cetaphil Header" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-top: #0c5b9a 4px solid; border-bottom: #0c5b9a 4px solid;">
 
     <!-- Hero Section -->
-    <section class="gradient-section fade-in">
-        <div class="container" style="text-align: center;">
+    <section class="gradient-section fade-in" style="background: linear-gradient(135deg, rgba(140, 207, 210, 1) 0%, rgba(140, 207, 210, 1) 35%, rgba(0, 74, 173, 1) 100%); color: white; padding: 50px; border-radius: 15px; margin: 30px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 30px 60px; text-align: center;">
             <h1 style="color: white; margin-bottom: 20px; font-size: clamp(32px, 5vw, 48px);">
                 Skincare Tips & Facts
             </h1>
-            <p class="text-content" style="margin-bottom: 30px; font-size: clamp(16px, 2.5vw, 20px);">
+            <p style="font-family: sans-serif; font-size: clamp(16px, 2.5vw, 20px); color: white; line-height: 1.6; text-align: justify; margin: 20px 0; margin-bottom: 30px;">
                 Expert advice and important information to help you get the most out of your Cetaphil routine. 
                 Learn about effects, limitations, and best practices for healthy skin.
             </p>
@@ -41,29 +61,29 @@
     </section>
 
     <!-- Effects Section -->
-    <section class="container" style="padding: 60px 20px;">
-        <h2 class="main-heading fade-in" style="text-align: center; margin-bottom: 50px;">EFFECTS & RESULTS</h2>
+    <section style="max-width: 1200px; margin: 0 auto; padding: 60px 60px;">
+        <h2 style="font-family: 'Bebas Neue', cursive; font-size: clamp(36px, 6vw, 56px); color: #0c5b9a; text-align: center; margin-bottom: 50px; letter-spacing: 2px;" class="fade-in">EFFECTS & RESULTS</h2>
         
-        <div class="gradient-section fade-in" style="border-radius: 15px; overflow: hidden;">
-            <div class="grid-2" style="gap: 0; align-items: center;">
+        <div style="background: linear-gradient(135deg, #0c5b9a 0%, #1e88e5 100%); border-radius: 15px; overflow: hidden;" class="fade-in">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: center;">
                 <div style="text-align: center; padding: 20px;">
                     <img src="cleanser2.png" alt="Cetaphil Effects" style="max-width: 100%; height: auto;">
                 </div>
                 
                 <div style="padding: 40px;">
-                    <p class="text-content" style="margin-bottom: 25px; font-size: clamp(16px, 2vw, 18px);">
+                    <p style="color: white; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; margin-bottom: 25px;">
                         Cetaphil Cleanser is thoughtfully formulated with a blend of ingredients that work together 
                         to cleanse, hydrate, and care for sensitive skin. At the heart of the formula is aqua (water), 
                         which serves as the base and helps deliver other active ingredients effectively.
                     </p>
                     
-                    <p class="text-content" style="margin-bottom: 25px; font-size: clamp(16px, 2vw, 18px);">
+                    <p style="color: white; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; margin-bottom: 25px;">
                         For hydration, glycerin acts as a powerful humectant, drawing moisture into the skin 
                         and helping it stay soft and supple throughout the day. Pantolactone further enhances 
                         this by attracting moisture and smoothing the skin's texture.
                     </p>
                     
-                    <p class="text-content" style="font-size: clamp(16px, 2vw, 18px);">
+                    <p style="color: white; font-size: clamp(16px, 2vw, 18px); line-height: 1.6;">
                         The cleanser's pleasant, gel-like consistency is achieved with xanthan gum, a natural 
                         thickening agent that improves texture and spreadability. Meanwhile, citric acid provides 
                         a gentle exfoliating effect by removing dead skin cells.
@@ -74,24 +94,24 @@
     </section>
 
     <!-- Limitations Section -->
-    <section class="container" style="padding: 60px 20px;">
-        <h2 class="main-heading fade-in" style="text-align: center; margin-bottom: 50px;">LIMITATIONS TO CONSIDER</h2>
+    <section style="max-width: 1200px; margin: 0 auto; padding: 60px 60px;">
+        <h2 style="font-family: 'Bebas Neue', cursive; font-size: clamp(36px, 6vw, 56px); color: #0c5b9a; text-align: center; margin-bottom: 50px; letter-spacing: 2px;" class="fade-in">LIMITATIONS TO CONSIDER</h2>
         
-        <div class="grid-2" style="gap: 40px; align-items: center;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
             <div class="fade-in">
-                <p class="text-content" style="margin-bottom: 30px;">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; margin-bottom: 30px;">
                     While Cetaphil Cleanser is gentle and effective for many users, it does have a few limitations 
                     to keep in mind. It may be less effective in hot or humid climates, where excess sweat and oil 
                     might require a more intensive cleanser.
                 </p>
                 
-                <p class="text-content" style="margin-bottom: 30px;">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; margin-bottom: 30px;">
                     Although it supports skin health, it is not formulated to fully address all skin conditions, 
                     so results may vary depending on individual concerns. Some users may not experience immediate 
                     results, which can lead to initial dissatisfaction or the perception that the product isn't working.
                 </p>
                 
-                <p class="text-content">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6;">
                     Additionally, the formula contains parabens, which some individuals prefer to avoid in their 
                     skincare routines. It may also fall short when it comes to removing heavy or waterproof makeup, 
                     and may need to be paired with a separate makeup remover for thorough cleansing.
@@ -105,13 +125,13 @@
     </section>
 
     <!-- Skincare Tips Section -->
-    <section class="container" style="padding: 60px 20px;">
-        <h2 class="main-heading fade-in" style="text-align: center; margin-bottom: 50px;">EXPERT SKINCARE TIPS</h2>
+    <section style="max-width: 1200px; margin: 0 auto; padding: 60px 60px;">
+        <h2 style="font-family: 'Bebas Neue', cursive; font-size: clamp(36px, 6vw, 56px); color: #0c5b9a; text-align: center; margin-bottom: 50px; letter-spacing: 2px;" class="fade-in">EXPERT SKINCARE TIPS</h2>
         
-        <div class="grid-3">
-            <div class="card fade-in">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" class="fade-in">
                 <h3 style="color: #0c5b9a; text-align: center; margin-bottom: 20px;">Morning Routine</h3>
-                <p class="text-content" style="margin-bottom: 15px;">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; margin-bottom: 15px;">
                     Start your day with Cetaphil cleanser using lukewarm water. Follow with a gentle moisturizer 
                     and always apply SPF 30+ sunscreen.
                 </p>
@@ -123,9 +143,9 @@
                 </ul>
             </div>
             
-            <div class="card fade-in">
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" class="fade-in">
                 <h3 style="color: #0c5b9a; text-align: center; margin-bottom: 20px;">Evening Routine</h3>
-                <p class="text-content" style="margin-bottom: 15px;">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; margin-bottom: 15px;">
                     Remove makeup first if needed, then cleanse with Cetaphil. This is the perfect time for 
                     any treatment products or heavier moisturizers.
                 </p>
@@ -137,9 +157,9 @@
                 </ul>
             </div>
             
-            <div class="card fade-in">
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" class="fade-in">
                 <h3 style="color: #0c5b9a; text-align: center; margin-bottom: 20px;">Special Considerations</h3>
-                <p class="text-content" style="margin-bottom: 15px;">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; margin-bottom: 15px;">
                     For sensitive skin, start slowly and observe how your skin responds. Adjust frequency 
                     based on your skin's needs and environmental factors.
                 </p>
@@ -154,38 +174,38 @@
     </section>
 
     <!-- Do's and Don'ts Section -->
-    <section class="gradient-section fade-in">
-        <div class="container">
+    <section style="background: linear-gradient(135deg, #0c5b9a 0%, #1e88e5 100%); padding: 40px 60px; text-align: center; color: white;" class="fade-in">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 20px 60px;">
             <h2 style="color: white; text-align: center; margin-bottom: 50px; font-size: clamp(32px, 5vw, 48px);">
                 Do's & Don'ts
             </h2>
             
-            <div class="grid-2" style="gap: 40px;">
-                <div class="card" style="background-color: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.3);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.3);">
                     <h3 style="color: #90EE90; text-align: center; margin-bottom: 25px; font-size: clamp(20px, 3vw, 24px);">
-                        <i data-lucide="check" class="icon-small" style="color: #90EE90;"></i> DO
+                        <i data-lucide="check" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #90EE90;"></i> DO
                     </h3>
                     <ul style="color: white; font-size: clamp(14px, 2vw, 16px); line-height: 1.8; list-style: none; padding: 0;">
-                        <li style="margin-bottom: 10px;"><i data-lucide="check" class="icon-small" style="color: #90EE90;"></i> Use lukewarm water for cleansing</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="check" class="icon-small" style="color: #90EE90;"></i> Massage gently in circular motions</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="check" class="icon-small" style="color: #90EE90;"></i> Pat skin dry with a clean towel</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="check" class="icon-small" style="color: #90EE90;"></i> Follow with appropriate moisturizer</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="check" class="icon-small" style="color: #90EE90;"></i> Use consistently for best results</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="check" class="icon-small" style="color: #90EE90;"></i> Store in a cool, dry place</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #90EE90;"></i> Use lukewarm water for cleansing</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #90EE90;"></i> Massage gently in circular motions</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #90EE90;"></i> Pat skin dry with a clean towel</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #90EE90;"></i> Follow with appropriate moisturizer</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #90EE90;"></i> Use consistently for best results</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #90EE90;"></i> Store in a cool, dry place</li>
                     </ul>
                 </div>
                 
-                <div class="card" style="background-color: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.3);">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.3);">
                     <h3 style="color: #FFB6C1; text-align: center; margin-bottom: 25px; font-size: clamp(20px, 3vw, 24px);">
-                        <i data-lucide="x" class="icon-small" style="color: #FFB6C1;"></i> DON'T
+                        <i data-lucide="x" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #FFB6C1;"></i> DON'T
                     </h3>
                     <ul style="color: white; font-size: clamp(14px, 2vw, 16px); line-height: 1.8; list-style: none; padding: 0;">
-                        <li style="margin-bottom: 10px;"><i data-lucide="x" class="icon-small" style="color: #FFB6C1;"></i> Use hot water (can strip natural oils)</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="x" class="icon-small" style="color: #FFB6C1;"></i> Scrub harshly or use rough cloths</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="x" class="icon-small" style="color: #FFB6C1;"></i> Over-cleanse (more than twice daily)</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="x" class="icon-small" style="color: #FFB6C1;"></i> Skip moisturizer after cleansing</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="x" class="icon-small" style="color: #FFB6C1;"></i> Expect immediate dramatic results</li>
-                        <li style="margin-bottom: 10px;"><i data-lucide="x" class="icon-small" style="color: #FFB6C1;"></i> Use if you have known allergies to ingredients</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="x" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #FFB6C1;"></i> Use hot water (can strip natural oils)</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="x" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #FFB6C1;"></i> Scrub harshly or use rough cloths</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="x" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #FFB6C1;"></i> Over-cleanse (more than twice daily)</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="x" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #FFB6C1;"></i> Skip moisturizer after cleansing</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="x" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #FFB6C1;"></i> Expect immediate dramatic results</li>
+                        <li style="margin-bottom: 10px;"><i data-lucide="x" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #FFB6C1;"></i> Use if you have known allergies to ingredients</li>
                     </ul>
                 </div>
             </div>
@@ -193,37 +213,37 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="container" style="padding: 60px 20px;">
-        <h2 class="main-heading fade-in" style="text-align: center; margin-bottom: 50px;">FREQUENTLY ASKED QUESTIONS</h2>
+    <section style="max-width: 1200px; margin: 0 auto; padding: 60px 60px;">
+        <h2 style="font-family: 'Bebas Neue', cursive; font-size: clamp(36px, 6vw, 56px); color: #0c5b9a; text-align: center; margin-bottom: 50px; letter-spacing: 2px;" class="fade-in">FREQUENTLY ASKED QUESTIONS</h2>
         
         <div style="max-width: 800px; margin: 0 auto;">
-            <div class="card fade-in" style="margin-bottom: 20px;">
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom: 20px;" class="fade-in">
                 <h3 style="color: #0c5b9a; margin-bottom: 15px;">How often should I use Cetaphil Cleanser?</h3>
-                <p class="text-content">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6;">
                     For most people, twice daily (morning and evening) is ideal. However, if you have very sensitive 
                     skin, start with once daily and gradually increase as your skin adjusts.
                 </p>
             </div>
             
-            <div class="card fade-in" style="margin-bottom: 20px;">
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom: 20px;" class="fade-in">
                 <h3 style="color: #0c5b9a; margin-bottom: 15px;">Can I use it to remove makeup?</h3>
-                <p class="text-content">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6;">
                     Cetaphil can remove light makeup, but for heavy or waterproof makeup, we recommend using 
                     a dedicated makeup remover first, then following with Cetaphil for a thorough cleanse.
                 </p>
             </div>
             
-            <div class="card fade-in" style="margin-bottom: 20px;">
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom: 20px;" class="fade-in">
                 <h3 style="color: #0c5b9a; margin-bottom: 15px;">Is it suitable for all skin types?</h3>
-                <p class="text-content">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6;">
                     Yes! Cetaphil is formulated to be gentle enough for sensitive skin while effective for normal, 
                     dry, and combination skin types. It's also safe for use during pregnancy and breastfeeding.
                 </p>
             </div>
             
-            <div class="card fade-in">
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;" class="fade-in">
                 <h3 style="color: #0c5b9a; margin-bottom: 15px;">When will I see results?</h3>
-                <p class="text-content">
+                <p style="color: #333; font-size: clamp(16px, 2vw, 18px); line-height: 1.6;">
                     Many users notice improved skin comfort immediately, but visible improvements in skin texture 
                     and appearance typically develop over 2-4 weeks of consistent use.
                 </p>
@@ -232,22 +252,22 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="gradient-section fade-in" style="text-align: center;">
-        <div class="container">
+    <section style="background: linear-gradient(135deg, #0c5b9a 0%, #1e88e5 100%); padding: 40px 60px; text-align: center; color: white;" class="fade-in">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 20px 60px;">
             <h2 style="color: white; margin-bottom: 20px;">Ready to Start Your Gentle Skincare Journey?</h2>
-            <p class="text-content" style="margin-bottom: 30px; font-size: clamp(16px, 2.5vw, 20px);">
+            <p style="color: white; font-size: clamp(16px, 2.5vw, 20px); line-height: 1.6; margin-bottom: 30px;">
                 Now that you know the facts, discover why millions trust Cetaphil for their daily routine.
             </p>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="product.html" class="btn" style="background-color: white; color: #0c5b9a;">View Product Details</a>
-                <a href="about.html" class="btn" style="background-color: transparent; border: 2px solid white;">Learn About Research</a>
+                <a href="product.html" style="display: inline-block; padding: 15px 30px; background-color: white; color: #0c5b9a; text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 16px; transition: all 0.3s ease; border: 2px solid transparent;">View Product Details</a>
+                <a href="about.html" style="display: inline-block; padding: 15px 30px; background-color: transparent; color: white; text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 16px; transition: all 0.3s ease; border: 2px solid white;">Learn About Research</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-section">
-        <p class="text-content">
+    <footer style="background-color: #333; color: white; text-align: center; padding: 30px 20px;">
+        <p style="color: white; font-size: clamp(16px, 2vw, 18px); line-height: 1.6;">
             Expert skincare advice backed by dermatological research. 
             Always consult with a dermatologist for specific skin concerns.
         </p>
