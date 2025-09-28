@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetaphil - Gentle Skincare Solutions</title>
+    <link rel="icon" type="image/webp" href="falvicon.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navlogocontainer">
+            <img src="https://www.cetaphil.com.ph/on/demandware.static/Sites-Galderma-PH-Site/-/default/dw3625689b/images/logo_small.png" alt="Cetaphil Logo">
+        </div>
+        <div class="rightsidecontainer">
+            <a href="index.html" class="navlink active">HOME</a>
+            <a href="product.html" class="navlink">PRODUCT</a>
+            <a href="tips.html" class="navlink">TIPS & FACTS</a>
+            <a href="about.html" class="navlink">ABOUT</a>
+        </div>
+    </nav>
+
+    <img src="headerpic.png" alt="Cetaphil Header" class="responsive-img" style="border-top: #0c5b9a 4px solid; border-bottom: #0c5b9a 4px solid;">
+
+    <section class="hero-section fade-in">
+        <div class="hero-image slide-in-left">
+            <img src="doctor.png" alt="Doctor">
+        </div>
+        <div class="hero-text slide-in-right">
+            <h1>In a world full of harsh chemicals, isn't it time you gave your skin the gentle care of Cetaphil?</h1>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="product.html" class="btn">Discover Our Products</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="main-heading fade-in">"WE DO SKIN, YOU DO YOU"</h2>
+        
+        <div class="video-container fade-in">
+            <iframe src="https://www.youtube.com/embed/TPKkDtGZDTU?si=1tQetEaIU5f8NVq8" 
+                    title="Cetaphil Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <h2 class="main-heading fade-in">WHAT'S BEST FOR YOUR SKIN?</h2>
+        <div style="text-align: center; margin: 40px 0;">
+            <img src="fourimages.png" alt="Skin Types" class="responsive-img fade-in">
+        </div>
+
+        <div class="grid-3" style="margin: 50px 0;">
+            <div class="card fade-in">
+                <h3 style="color: #0c5b9a; text-align: center; margin-bottom: 20px;">Gentle Formula</h3>
+                <p class="text-content">Specially formulated for sensitive skin with dermatologist-approved ingredients.</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="product.html" class="btn-secondary btn">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="card fade-in">
+                <h3 style="color: #0c5b9a; text-align: center; margin-bottom: 20px;">Proven Results</h3>
+                <p class="text-content">Clinically tested and recommended by dermatologists worldwide for all skin types.</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="tips.html" class="btn-secondary btn">View Tips</a>
+                </div>
+            </div>
+            
+            <div class="card fade-in">
+                <h3 style="color: #0c5b9a; text-align: center; margin-bottom: 20px;">Research Backed</h3>
+                <p class="text-content">Backed by extensive research and years of dermatological expertise.</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="about.html" class="btn-secondary btn">Our Research</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="gradient-section fade-in" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to Transform Your Skincare Routine?</h2>
+            <p class="text-content" style="margin-bottom: 30px;">
+                Experience the gentle yet effective care that millions trust worldwide. 
+                Discover why Cetaphil is the #1 dermatologist-recommended brand.
+            </p>
+            <a href="product.html" class="btn" style="background-color: white; color: #0c5b9a; margin-right: 15px;">Shop Now</a>
+            <a href="tips.html" class="btn" style="background-color: transparent; border: 2px solid white;">Learn More</a>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <p class="text-content">
+            Discover the gentle yet effective formulation of Cetaphil Gentle Skin Cleanser, 
+            meticulously crafted to provide balanced and nurturing cleanse for all skin types.
+        </p>
+    </footer>
+
+    <script>
+        // Simple animation trigger on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements that should animate
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            animateElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
